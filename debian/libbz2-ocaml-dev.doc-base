@@ -1,0 +1,8 @@
+Document: libbz2-ocaml-dev-ocamldoc-api-reference
+Title: Camlbz2 API Reference
+Abstract: API reference manual for libbz2-ocaml-dev
+Section: Programming/OCaml
+
+Format: HTML
+Index: /usr/share/doc/libbz2-ocaml-dev/doc/index.html
+Files: /usr/share/doc/libbz2-ocaml-dev/doc/*

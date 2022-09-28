@@ -1,0 +1,26 @@
+#!/usr/bin/make -f
+
+include /usr/share/ocaml/ocamlvars.mk
+
+DESTDIR=$(CURDIR)/debian/tmp
+OCAMLFIND_DESTDIR=$(DESTDIR)$(OCAML_STDLIB_DIR)
+export OCAMLFIND_DESTDIR
+
+%:
+	dh $@ --with ocaml --no-parallel
+
+override_dh_autoreconf:
+	dh_autoreconf autoreconf -- -f -i -I .
+
+override_dh_auto_configure:
+	./configure --prefix /usr
+
+override_dh_auto_build:
+	dh_auto_build
+	make doc
+
+override_dh_auto_install:
+	mkdir -p $(OCAMLFIND_DESTDIR)
+	$(MAKE) install DESTDIR=
+
+override_dh_auto_test:

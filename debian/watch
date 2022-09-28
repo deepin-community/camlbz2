@@ -1,0 +1,2 @@
+version=4
+https://gitlab.com/irill/camlbz2/tags?sort=updated_desc .*/archive/[0-9.]+/camlbz2-([0-9.]+)\.tar\.gz

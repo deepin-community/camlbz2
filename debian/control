@@ -1,0 +1,64 @@
+Source: camlbz2
+Section: ocaml
+Priority: optional
+Maintainer: Debian OCaml Maintainers <debian-ocaml-maint@lists.debian.org>
+Uploaders:
+ Ralf Treinen <treinen@debian.org>
+Build-Depends:
+ debhelper-compat (= 13),
+ ocaml-nox (>= 3.11),
+ ocaml-findlib (>= 1.2.4),
+ libbz2-dev,
+ dh-ocaml
+Standards-Version: 4.6.0
+Homepage: https://gitlab.com/irill/camlbz2/-/tree/master
+Vcs-Browser: https://salsa.debian.org/ocaml-team/camlbz2
+Vcs-Git: https://salsa.debian.org/ocaml-team/camlbz2.git
+Rules-Requires-Root: no
+
+Package: libbz2-ocaml-dev
+Architecture: any
+Depends:
+ libbz2-dev,
+ libbz2-ocaml (= ${binary:Version}),
+ ocaml-findlib,
+ ${ocaml:Depends},
+ ${shlibs:Depends},
+ ${misc:Depends}
+Provides: ${ocaml:Provides}
+Description: OCaml bindings for the bzip2 compression library
+ CamlBZ2 provides OCaml bindings for libbz2 (AKA bzip2), a popular
+ compression library which typically compresses better (i.e., smaller
+ resulting files) than gzip.
+ .
+ Using CamlBZ2 you can read and write compressed "files", where files
+ can be anything offering an in_channel/out_channel abstraction
+ (files, sockets, ...).
+ .
+ Also, with CamlBZ2 you can compress and decompress strings in memory
+ using the bzip2 compression algorithm.
+ .
+ This package contains all the development stuff you need to use
+ CamlBZ2 in your programs.
+
+Package: libbz2-ocaml
+Architecture: any
+Depends:
+ ${ocaml:Depends},
+ ${shlibs:Depends},
+ ${misc:Depends}
+Provides:
+ ${ocaml:Provides}
+Description: OCaml bindings for the bzip2 compression library (runtime)
+ CamlBZ2 provides OCaml bindings for libbz2 (AKA bzip2), a popular
+ compression library which typically compresses better (i.e., smaller
+ resulting files) than gzip.
+ .
+ Using CamlBZ2 you can read and write compressed "files", where files
+ can be anything offering an in_channel/out_channel abstraction
+ (files, sockets, ...).
+ .
+ Also, with CamlBZ2 you can compress and decompress strings in memory
+ using the bzip2 compression algorithm.
+ .
+ This package contains only the shared runtime stub libraries.

@@ -1,0 +1,13 @@
+Index: camlbz2/examples/bunzip2.ml
+===================================================================
+--- camlbz2.orig/examples/bunzip2.ml	2021-10-25 21:14:16.227515892 +0200
++++ camlbz2/examples/bunzip2.ml	2021-10-26 08:20:11.863465959 +0200
+@@ -30,7 +30,7 @@
+   open_out (Filename.chop_suffix iname ".bz2")
+ 
+ let buflen = 8192
+-let buf = String.create buflen
++let buf = Bytes.create buflen
+ let bzic = Bz2.open_in ic
+ let _ =
+   try

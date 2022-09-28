@@ -1,0 +1,11 @@
+#!/bin/sh
+
+set -e
+
+testdir=${AUTOPKGTEST_TMP:-/tmp}
+cp examples/*.ml ${testdir}
+cd ${testdir}
+ocamlfind ocamlc -package bz2 -linkpkg -o bunzip2 bunzip2.ml
+if [ -x /usr/bin/ocamlopt ]; then
+    ocamlfind ocamlopt -package bz2 -linkpkg -o bunzip2 bunzip2.ml
+fi

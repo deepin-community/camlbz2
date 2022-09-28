@@ -1,0 +1,118 @@
+camlbz2 (0.7.0-1) unstable; urgency=medium
+
+  [ Johannes 'josch' Schauer ]
+  * debian/patches: drop all previous patches (all integrated upstream)
+  * debian/rules: run autoreconf
+  * bump dh compat to 13 and use debhelper-compat version in Build-Depends
+  * debian/copyright: use spaces rather than tabs to start continuation lines.
+  * debian/rules: build docs with ocamldoc
+  * debian/libbz2-ocaml-dev.examples: install examples
+  * debian/control: add Rules-Requires-Root: no
+
+  [ Ralf Treinen ]
+  * New upstream version
+  * New homepage on gitlab
+  * Standards-version 4.6.0 (no change)
+  * Patch example-use-bytes: use Bytes instead of String in examples
+  * Add as-installed test
+  * Add debian/upstream/metadata
+
+ -- Ralf Treinen <treinen@debian.org>  Tue, 26 Oct 2021 08:48:55 +0200
+
+camlbz2 (0.6.0-10) unstable; urgency=medium
+
+  * Team upload
+  * Use bytes instead of string for buffers
+
+ -- Stéphane Glondu <glondu@debian.org>  Sun, 11 Aug 2019 16:50:14 +0200
+
+camlbz2 (0.6.0-9) unstable; urgency=medium
+
+  * Team upload
+  * Call dh with --no-parallel
+
+ -- Stéphane Glondu <glondu@debian.org>  Wed, 24 Jul 2019 12:54:01 +0200
+
+camlbz2 (0.6.0-8) unstable; urgency=medium
+
+  * Team upload
+  * Switch to dh
+  * Bump debhelper compat level to 12
+  * Bump Standards-Version to 4.4.0
+  * Update Vcs-*
+  * Switch debian/copyright to format 1.0
+  * Remove myself from Uploaders
+
+ -- Stéphane Glondu <glondu@debian.org>  Wed, 17 Jul 2019 13:11:27 +0200
+
+camlbz2 (0.6.0-7) unstable; urgency=low
+
+  [ Stéphane Glondu ]
+  * Switch source package format to 3.0 (quilt)
+  * Do no longer use TopGit
+
+  [ Sylvain Le Gall ]
+  * Remove Sylvain Le Gall from uploaders
+
+  [ Ralf Treinen ]
+  * Debhelper compat level 10
+  * Add myself to Uploaders
+  * Standards-Version 3.9.8 (no changes)
+  * Updated Vcs-{Git,Browser}
+
+ -- Ralf Treinen <treinen@debian.org>  Tue, 25 Oct 2016 21:13:41 +0200
+
+camlbz2 (0.6.0-6) unstable; urgency=low
+
+  * Add dependency to libbz2-ocaml-dev (Closes: #603939)
+  * Add myself to Uploaders, and remove Stefano
+
+ -- Stéphane Glondu <glondu@debian.org>  Thu, 18 Nov 2010 23:06:25 +0100
+
+camlbz2 (0.6.0-5) unstable; urgency=low
+
+  * Rebuild with the good git branch and add 'debian-branch = build' in
+    debian/gbp.conf to avoid future mistake (Closes: #561710)
+
+ -- Sylvain Le Gall <gildor@debian.org>  Sat, 19 Dec 2009 22:40:58 +0000
+
+camlbz2 (0.6.0-4) unstable; urgency=low
+
+  [ Stefano Zacchiroli ]
+  * debian/copyright:
+    - bump copyright years
+    - reference versioned file under /usr/share/common-licenses/
+
+  [ Sylvain Le Gall ]
+  * Use dh-ocaml 0.9.1 features
+  * Upgrade Standards-Version to 3.8.3 (section ocaml)
+  * Install API documentation
+  * Use only clean target, distclean remove too much source file
+  * Add debian/gbp.conf to always use pristine-tar
+
+ -- Sylvain Le Gall <gildor@debian.org>  Sat, 19 Dec 2009 12:26:13 +0100
+
+camlbz2 (0.6.0-3) unstable; urgency=low
+
+  * uploading to unstable
+  * debian/control: bump build-dep on findlib, to ensure buildability in
+    unstable
+  * debian/rules: use ocaml.mk as a CDBS "rules" snippet, bump build-dep
+    on dh-ocaml to the minimum version implementing this
+
+ -- Stefano Zacchiroli <zack@debian.org>  Wed, 25 Feb 2009 11:07:42 +0100
+
+camlbz2 (0.6.0-2) experimental; urgency=low
+
+  * Rebuild against OCaml 3.11
+  * debian/rules: rely on the topgit makefile snippet instead of
+    implementing by hand the "tg-export" target. Patch README.source with
+    the relevant information
+
+ -- Stefano Zacchiroli <zack@debian.org>  Tue, 10 Feb 2009 13:03:33 +0100
+
+camlbz2 (0.6.0-1) experimental; urgency=low
+
+  * Initial release (Closes: #504991)
+
+ -- Stefano Zacchiroli <zack@debian.org>  Sun, 09 Nov 2008 00:36:01 +0100

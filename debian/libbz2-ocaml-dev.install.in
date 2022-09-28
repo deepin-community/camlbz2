@@ -1,0 +1,4 @@
+@OCamlStdlibDir@/bz2/*.cm*
+@OCamlStdlibDir@/bz2/*.mli
+@OCamlStdlibDir@/bz2/*.a
+@OCamlStdlibDir@/bz2/META
